@@ -129,21 +129,21 @@ Build a static portfolio website for Bella Grant / Pathway Analytics using Astro
     - Verify sitemap XML is generated in build output
     - _Requirements: 6.4_
 
-- [-] 8. Checkpoint - Build verification
+- [x] 8. Checkpoint - Build verification
   - Ensure `pnpm build` completes with zero errors and zero warnings. Verify `dist/index.html`, `dist/robots.txt`, and `dist/sitemap-index.xml` exist. Ask the user if questions arise.
 
-- [ ] 9. Documentation and GitHub setup
-  - [-] 9.1 Create README.md
+- [x] 9. Documentation and GitHub setup
+  - [x] 9.1 Create README.md
     - Document tech stack (Astro, SST, pnpm), project structure, local dev setup (`pnpm install`, `pnpm dev`), deployment commands (`npx sst deploy --stage production`), and content editing guidance for project cards and timeline data
     - _Requirements: 8.3, 8.4, 9.4_
 
-  - [-] 9.2 Initialise Git repository and push to GitHub
+  - [x] 9.2 Initialise Git repository and push to GitHub
     - Create `.gitignore` with `node_modules/`, `dist/`, `.sst/`, `.astro/`
     - Initialise git repo, commit all files
     - Create remote repository at `github.com/pathway-analytics/bella` and push
     - _Requirements: 9.4_
 
-- [~] 10. Final checkpoint - Full verification
+- [x] 10. Final checkpoint - Full verification
   - Ensure all tests pass, `pnpm build` succeeds cleanly, and all content sections match the Reference_HTML. Ask the user if questions arise.
 
 ## Notes
