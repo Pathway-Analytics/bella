@@ -10,14 +10,18 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "astro": "^5.9.4",
-    "@astrojs/sitemap": "^3.7.3"
+    "astro-sst": "^3.1.4"
   },
   "devDependencies": {
     "sst": "^4.17.0",
     "typescript": "^5.8.3"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild", "sharp"]
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }
