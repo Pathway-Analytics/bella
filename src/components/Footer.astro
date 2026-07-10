@@ -1,0 +1,16 @@
+---
+/**
+ * Footer component
+ * Displays company name/description and dynamic copyright year.
+ * The year is populated at runtime via an inline <script> tag.
+ */
+---
+
+<footer class="wrap">
+  <span>Pathway Analytics Ltd · Health economics, strategy &amp; system design</span>
+  <span>© <span id="year"></span> Pathway Analytics</span>
+</footer>
+
+<script>
+  document.getElementById('year')!.textContent = new Date().getFullYear().toString();
+</script>

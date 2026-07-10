@@ -1,0 +1,23 @@
+{
+  "name": "bella-pathwayanalytics",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bella Grant · Pathway Analytics — personal/professional portfolio",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.9.4",
+    "@astrojs/sitemap": "^3.7.3"
+  },
+  "devDependencies": {
+    "sst": "^4.17.0",
+    "typescript": "^5.8.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"]
+  }
+}

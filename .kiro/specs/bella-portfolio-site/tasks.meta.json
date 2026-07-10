@@ -1,0 +1,454 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Initialise Astro project structure and update dependencies": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420378
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693430296
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694153481
+      }
+    ],
+    "1.2 Create SST v4.17 configuration": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420408
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694157803
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694557860
+      }
+    ],
+    "1.3 Extract portrait image and create static assets": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420453
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694158592
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694557042
+      }
+    ],
+    "2.1 Create global CSS stylesheet": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420479
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694159115
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694556192
+      }
+    ],
+    "2.2 Create BaseLayout component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420508
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694562678
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694899740
+      }
+    ],
+    "3.1 Create project cards data file": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420528
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694563262
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694900430
+      }
+    ],
+    "3.2 Create timeline stations data file": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420549
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694563979
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694901049
+      }
+    ],
+    "4.1 Create Nav component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420571
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694906583
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695350862
+      }
+    ],
+    "4.2 Create Hero component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420593
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694908365
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695351437
+      }
+    ],
+    "4.3 Create Route (Timeline) component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420614
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694908382
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695352133
+      }
+    ],
+    "5.1 Create Offer component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420635
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694908487
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695352770
+      }
+    ],
+    "5.2 Create Methods component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420661
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694909128
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695353472
+      }
+    ],
+    "5.3 Create Proof component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420687
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695357672
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695427868
+      }
+    ],
+    "6.1 Create Projects component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420709
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695433047
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695552338
+      }
+    ],
+    "6.2 Create About component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420728
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695433990
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695552929
+      }
+    ],
+    "6.3 Create Publications component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420749
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695434345
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695553659
+      }
+    ],
+    "6.4 Create Contact component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420768
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695435095
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695554260
+      }
+    ],
+    "6.5 Create Footer component": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420790
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695435684
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695554864
+      }
+    ],
+    "7.1 Create index page and wire all components": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420811
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695560353
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695637312
+      }
+    ],
+    "7.2 Add IntersectionObserver script for timeline animation": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420831
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695560964
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695638005
+      }
+    ],
+    "7.3 Create sitemap integration": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420851
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695561580
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695638726
+      }
+    ],
+    "8. Checkpoint - Build verification": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420873
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695655653
+      }
+    ],
+    "9.1 Create README.md": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420907
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695656266
+      }
+    ],
+    "9.2 Initialise Git repository and push to GitHub": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420928
+      },
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695657065
+      }
+    ],
+    "10. Final checkpoint - Full verification": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783693420948
+      }
+    ],
+    "1. Project setup and configuration": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694557902
+      }
+    ],
+    "2. Global styles and base layout": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694899776
+      }
+    ],
+    "3. TypeScript data files": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783694901070
+      }
+    ],
+    "4. Section components (Navigation, Hero, Route)": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695352155
+      }
+    ],
+    "5. Section components (Offer, Methods, Proof)": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695427908
+      }
+    ],
+    "6. Section components (Projects, About, Publications, Contact, Footer)": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695554892
+      }
+    ],
+    "7. Page assembly and interactivity": [
+      {
+        "executionId": "c68e34ee-bfae-47d9-a97f-45d556b48eda",
+        "chatSessionId": "sess_5a0460f5-75be-4b63-96d6-32e9357ccea4",
+        "timestamp": 1783695638751
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+---
+import { stations } from '../data/timeline';
+---
+
+<section class="route" id="route">
+  <div class="wrap">
+    <span class="section-kicker">The route</span>
+    <h2>Finance, strategy, public health and policy — one continuous practice.</h2>
+    <p class="desc">The sectors changed. The underlying work did not: understand the system, follow the money and evidence, bring competing perspectives into the room, and turn analysis into a workable decision.</p>
+
+    <div class="line-track" aria-hidden="true">
+      <svg viewBox="0 0 1000 6" preserveAspectRatio="none">
+        <path d="M0,3 L1000,3"></path>
+        <path class="draw" d="M0,3 L1000,3"></path>
+      </svg>
+    </div>
+
+    <div class="stations">
+      {stations.map((station) => (
+        <div class={`station${station.isNow ? ' now' : ''}`}>
+          <div class="yr">{station.yearRange}</div>
+          <div class="role">{station.role}</div>
+          <div class="org">{station.organisation}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const track = document.querySelector('.line-track');
+  if (track) {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              track.classList.add('in-view');
+              observer.unobserve(track);
+            }
+          });
+        },
+        { threshold: 0.35 }
+      );
+      observer.observe(track);
+    } else {
+      track.classList.add('in-view');
+    }
+  }
+</script>
