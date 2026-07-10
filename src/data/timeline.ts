@@ -18,37 +18,31 @@ export const stations: TimelineStation[] = [
     yearRange: '1995–2009',
     role: 'Investment Banking & Strategy Consulting',
     organisation:
-      'Hambros Bank, WestLB Panmure, Cap Gemini Ernst & Young, independent consulting and Goldman Sachs. Financial modelling, company analysis, pricing, transformation and high-pressure delivery.',
+      'Vice President, Goldman Sachs; Associate Director, WestLB Panmure, leading an international equity-research team; Senior Strategy Consultant, Cap Gemini Ernst & Young.',
   },
   {
     yearRange: '2009–present',
-    role: 'Founder, Pathway Analytics',
+    role: 'Founder & Director, Pathway Analytics',
     organisation:
-      'Health economics, funding models, patient pathways and evaluation for NHS, government, local authority and voluntary-sector clients.',
-  },
-  {
-    yearRange: '2009–2016',
-    role: 'National funding & service reform',
-    organisation:
-      'Integrated Sexual Health Tariff, sexual-assault services, diabetes pathways, HIV commissioning and national screening economics.',
-  },
-  {
-    yearRange: '2017–2019',
-    role: 'London HIV system review',
-    organisation:
-      'Led the Fast-Track Cities assets, gaps and opportunities review for the Mayor of London and health-system partners.',
+      'Built and led an independent consultancy delivering national funding reform, system reviews, service redesign and public-value analysis across government and healthcare.',
   },
   {
     yearRange: '2020–2022',
-    role: 'National COVID-19 response',
+    role: 'COVID-19 public health response',
     organisation:
-      'Frontline contact tracing followed by Head of Epidemiology and analytical product leadership within the Joint Biosecurity Centre / UKHSA.',
+      'Moved from frontline tracing into leadership of a multidisciplinary public-health analytics team, supporting local action and cross-government policy decisions.',
   },
   {
-    yearRange: '2024–present',
-    role: 'Independent advisory & public leadership',
+    yearRange: '2023–2024',
+    role: 'Parliamentary Candidate',
     organisation:
-      'Complex evaluation, health equity, strategic programme review, civic leadership and public advocacy.',
+      'Built a general-election campaign from scratch in six weeks, recruited and led volunteers, raised more than £7,000 in grassroots funding and secured 9,533 votes.',
+  },
+  {
+    yearRange: 'Now',
+    role: 'Board, Executive & Public Leadership',
+    organisation:
+      'Strategy, programme leadership, policy, advocacy and system reform for public bodies, funders, boards and mission-led organisations.',
     isNow: true,
   },
 ];
