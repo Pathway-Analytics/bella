@@ -10,11 +10,20 @@ name: Deploy site
 on:
   push:
     branches: [main]
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: Stage (production = bella.pathwayanalytics.com, anything else = bella-<stage>.pathwayanalytics.com)
+        default: production
+      action:
+        description: deploy, or remove (non-production stages only)
+        type: choice
+        options: [deploy, remove]
+        default: deploy
 
 # Never run two deploys at once; let a running deploy finish.
 concurrency:
-  group: deploy-production
+  group: deploy-${{ inputs.stage || 'production' }}
   cancel-in-progress: false
 
 permissions:
@@ -46,5 +55,14 @@ jobs:
           role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN || secrets.AWS_DEPLOY_ROLE_ARN }}
           aws-region: eu-west-2
 
-      - name: Deploy to production
-        run: pnpm exec sst deploy --stage production
+      - name: Deploy
+        if: ${{ (inputs.action || 'deploy') == 'deploy' }}
+        run: pnpm exec sst deploy --stage "$STAGE"
+        env:
+          STAGE: ${{ inputs.stage || 'production' }}
+
+      - name: Remove stage
+        if: ${{ inputs.action == 'remove' && inputs.stage != 'production' }}
+        run: pnpm exec sst remove --stage "$STAGE"
+        env:
+          STAGE: ${{ inputs.stage }}

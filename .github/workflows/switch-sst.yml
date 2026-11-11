@@ -1,0 +1,45 @@
+# One-off: switch the sst package to the sst-community fork and
+# commit the updated package.json and pnpm-lock.yaml back to main.
+# Run from the Actions tab. Safe to delete after use.
+
+name: Switch SST to sst-community
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: sst-community version
+        default: "4.17.2"
+
+permissions:
+  contents: write
+
+jobs:
+  switch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Swap package
+        run: pnpm add -D "sst@npm:@sst-community/sst@${{ inputs.version }}"
+
+      - name: Show result
+        run: |
+          grep '"sst"' package.json
+          pnpm exec sst version
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package.json pnpm-lock.yaml
+          git commit -m "build: switch sst to @sst-community/sst@${{ inputs.version }}"
+          git push
