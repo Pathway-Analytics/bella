@@ -1,0 +1,51 @@
+# Deploys bella.pathwayanalytics.com with SST whenever main changes.
+#
+# One-off setup (see README "Automatic deployment"):
+#   1. In AWS, create a GitHub OIDC identity provider and a deploy role.
+#   2. In GitHub, add a repository variable AWS_DEPLOY_ROLE_ARN with the role's ARN.
+# Until that variable exists, this workflow is skipped rather than failing.
+
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+# Never run two deploys at once; let a running deploy finish.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  id-token: write # lets GitHub sign in to AWS without stored keys
+  contents: read
+
+jobs:
+  deploy:
+    if: ${{ vars.AWS_DEPLOY_ROLE_ARN != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install packages
+        run: pnpm install --frozen-lockfile
+
+      - name: Sign in to AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: eu-west-2
+
+      - name: Deploy to production
+        run: pnpm exec sst deploy --stage production

@@ -88,7 +88,46 @@ Serves the built `dist/` directory locally for final checks before deployment.
 
 The site is deployed to AWS using SST v4.17. SST provisions CloudFront, S3, ACM (HTTPS), and Route 53 DNS automatically.
 
-### Staging
+### Automatic deployment (GitHub Actions)
+
+Every push to `main` deploys to production through `.github/workflows/deploy.yml`. It can also be run by hand from the repo's **Actions** tab ("Deploy site" → "Run workflow"). The workflow is skipped until the one-off AWS setup below is done.
+
+One-off setup, by someone with admin access to the Pathway Analytics AWS account (the account that holds the `pathwayanalytics.com` Route 53 zone):
+
+1. **Add GitHub as an identity provider.** IAM → Identity providers → Add provider → OpenID Connect.
+   - Provider URL: `https://token.actions.githubusercontent.com`
+   - Audience: `sts.amazonaws.com`
+   - Skip if it already exists.
+2. **Create the deploy role.** IAM → Roles → Create role → Web identity → choose the provider above, audience `sts.amazonaws.com`. Name it `github-deploy-bella`. Then replace its trust policy with the one below (put in the account ID), so only the `main` branch of this repo can use it:
+
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": { "Federated": "arn:aws:iam::<ACCOUNT_ID>:oidc-provider/token.actions.githubusercontent.com" },
+         "Action": "sts:AssumeRoleWithWebIdentity",
+         "Condition": {
+           "StringEquals": { "token.actions.githubusercontent.com:aud": "sts.amazonaws.com" },
+           "StringLike": { "token.actions.githubusercontent.com:sub": "repo:Pathway-Analytics/bella:ref:refs/heads/main" }
+         }
+       }
+     ]
+   }
+   ```
+
+3. **Give the role permissions.** SST manages CloudFront, S3, ACM, Route 53, Lambda, IAM and SSM, so the simplest working option is the `AdministratorAccess` managed policy. The trust policy above limits who can use it. Narrow it later if wanted.
+4. **Tell GitHub the role.** In this repo: Settings → Secrets and variables → Actions → **Variables** tab → New repository variable.
+   - Name: `AWS_DEPLOY_ROLE_ARN`
+   - Value: the role ARN, e.g. `arn:aws:iam::<ACCOUNT_ID>:role/github-deploy-bella`
+5. **Test it.** Actions tab → "Deploy site" → Run workflow. A green tick means the site is live with the latest `main`.
+
+SST keeps its deployment state in the AWS account, so deploys from GitHub pick up the existing production stage. Deploys done by hand still work as before.
+
+### Manual deployment
+
+#### Staging
 
 ```bash
 npx sst deploy --stage staging
@@ -96,7 +135,7 @@ npx sst deploy --stage staging
 
 Deploys to `https://bella-staging.pathwayanalytics.com`.
 
-### Production
+#### Production
 
 ```bash
 npx sst deploy --stage production
@@ -104,7 +143,7 @@ npx sst deploy --stage production
 
 Deploys to `https://bella.pathwayanalytics.com`.
 
-### Tear down a stage
+#### Tear down a stage
 
 ```bash
 npx sst remove --stage staging
