@@ -30,10 +30,10 @@ export const stations: TimelineStation[] = [
     yearRange: '2020–2022',
     role: 'COVID-19 public health response',
     organisation:
-      'Moved from frontline tracing into leadership of a multidisciplinary public-health analytics team, supporting local action and cross-government policy decisions.',
+      'Moved from frontline contact tracing to Head of Epidemiology & Public Health at the Joint Biosecurity Centre (UKHSA), supporting local action and cross-government policy decisions.',
   },
   {
-    yearRange: '2023–2024',
+    yearRange: '2024',
     role: 'Parliamentary Candidate',
     organisation:
       'Built a general-election campaign from scratch in six weeks, recruited and led volunteers, raised more than £7,000 in grassroots funding and secured 9,533 votes.',
