@@ -19,8 +19,8 @@ importers:
         version: 3.1.4
     devDependencies:
       sst:
-        specifier: ^4.17.0
-        version: 4.17.0
+        specifier: npm:@sst-community/sst@^4.17.2
+        version: '@sst-community/sst@4.17.2'
       typescript:
         specifier: ^5.8.3
         version: 5.9.3
@@ -752,6 +752,9 @@ packages:
   '@smithy/core@3.29.2':
     resolution: {integrity: sha512-DXUk6yU0C1Q1tYvJh1VCtl8QOBcSoZpKwjTPkxT6A4MUQYHvgeKGByL8mrEdxnvhdf9nq5GyzmRb5n/vPgu3Lw==}
     engines: {node: '>=18.0.0'}
+    deprecated: |-
+      Deprecated due to a bug in custom logger data redaction. Upgrade to the latest version. If you used a custom logger with this
+        version, review your logs and rotate any credentials or other secrets. See https://github.com/aws/aws-sdk-js-v3/issues/8393.
 
   '@smithy/credential-provider-imds@4.4.7':
     resolution: {integrity: sha512-UEMLOoA0Fl4uYBxh6l0uN0H6EJe/A89OGeDNTteQeXpJ20BcpfIr4wlCY9pel1jEAUHAxaYwuqrYlrKdXE1GKQ==}
@@ -772,6 +775,50 @@ packages:
   '@smithy/types@4.16.0':
     resolution: {integrity: sha512-aVUabzlBBmY0PfvVgLKQSOGFIL5/7R54JE3uD9a5Ay/jSED61SkuAcCYENNXJzYUvJ1NPrWO0P+rAXHCkbBUKw==}
     engines: {node: '>=18.0.0'}
+
+  '@sst-community/sst-darwin-arm64@4.17.2':
+    resolution: {integrity: sha512-gkddUhq/PjheIMiD1p656QMxweRkY63IBue8k+vqjWpNmy3/KHHf6/tyvEC88jEIy6+FQhFVHtH9BWSsqgzjCw==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@sst-community/sst-darwin-x64@4.17.2':
+    resolution: {integrity: sha512-kSgrPDcSZyts/PsWAfe3dBQvlijxn62PINYCcngaCm9PRcAj6I+57ZQQSFfmdD/oPFBehfU+aJB9bmvNTKDddQ==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@sst-community/sst-linux-arm64@4.17.2':
+    resolution: {integrity: sha512-AX/hPTa5BNPO7XcAjjkg3jd/UX9FUsJ/0eKiyWv7Qad20tWd9CGjJO94kT+rCShW/yKdctFViJVDliizyLs1+g==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@sst-community/sst-linux-x64@4.17.2':
+    resolution: {integrity: sha512-2tUUys525fX1mM5xCL30K84uIfr+iEY+QQaLIweBCLab1A8+10ayOiCjZBnu0p4GkpnAOvB5a85AmIatmpPFTw==}
+    cpu: [x64]
+    os: [linux]
+
+  '@sst-community/sst-linux-x86@4.17.2':
+    resolution: {integrity: sha512-kvlWPgcx+hjefM1Nk3zZa3ZVprkkzq7nF1WDCdo5vSdMqteIn3BGVT+Ak74wD3EEuFn2M23yQFdmGOJySVeACQ==}
+    cpu: [x86]
+    os: [linux]
+
+  '@sst-community/sst-win32-arm64@4.17.2':
+    resolution: {integrity: sha512-auN/tWMNVYYDO9lbrPUHIh6mUQF3BJpSuuGQxbMMXEXfYNCkuQG0n+daEIZoYTGgM8FwGJ1l5a+45uKdBri1QA==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@sst-community/sst-win32-x64@4.17.2':
+    resolution: {integrity: sha512-EvArV7mca72AE3yaPXVFlJazT4UZq3/XrXq93K9nLPlleoUyqfTmSbIMhsqTT1cB2EgpmtvVufX1M0FIHR3r6A==}
+    cpu: [x64]
+    os: [win32]
+
+  '@sst-community/sst-win32-x86@4.17.2':
+    resolution: {integrity: sha512-TUiWo3ueFoM6cc6INRxyCghAr1eewg2d4j670a1VC5FA4xhs80F3puya0u9FrGM1rQg/Y85PMsugplHTGg2ysQ==}
+    cpu: [x86]
+    os: [win32]
+
+  '@sst-community/sst@4.17.2':
+    resolution: {integrity: sha512-cWs6E2J8Zh9QcIHmNBwkqAUIZv5vYYeWAIJvcPZey2lHzRG5B2mTWONA9Z/XnVTYnFaWpBvC83C+s80PchykbQ==}
+    hasBin: true
 
   '@types/debug@4.1.13':
     resolution: {integrity: sha512-KSVgmQmzMwPlmtljOomayoR89W4FynCAi3E8PPs7vmDVPe84hT+vGPKkJfThkmXs0x0jAaa9U8uW8bbfyS2fWw==}
@@ -1522,50 +1569,6 @@ packages:
 
   space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
-
-  sst-darwin-arm64@4.17.0:
-    resolution: {integrity: sha512-0aoQWA/W70MMrJjsiU5MwHt+uOXcPkx8SgHT3EteGflbaVLVB71PbNTTuoBzzoGBC/u3+yFA9PseVNsZCy0xcA==}
-    cpu: [arm64]
-    os: [darwin]
-
-  sst-darwin-x64@4.17.0:
-    resolution: {integrity: sha512-LRX0zcLPfckvawVmHDTXHROi7DBEn6cg3ud6O393UXtur34KF/8T2usgbTy36lkH9/rb/ekPQu501oA0OhdNZg==}
-    cpu: [x64]
-    os: [darwin]
-
-  sst-linux-arm64@4.17.0:
-    resolution: {integrity: sha512-X83Hvs6ik5Atwvea8r4APc20b4sSnr6D/sLE70HjFK4wcgbVIpQTxu0L6whO6RLj7iSq7z8t21vqfFybBhxv7w==}
-    cpu: [arm64]
-    os: [linux]
-
-  sst-linux-x64@4.17.0:
-    resolution: {integrity: sha512-TW9x02ksVbJAFyk3JmHufXl8INS7TErbABJ6+dGQZ4We9eJt7DYku1WmQeN5paFzoS2LYc/r/luNwHvHYWZOzQ==}
-    cpu: [x64]
-    os: [linux]
-
-  sst-linux-x86@4.17.0:
-    resolution: {integrity: sha512-iUnsj1oyxxO5dZVWNgCqTQQXReMIHZ0IlgyZMLrUtbB+wgbtIB+fzZoYCuz/vmSH+nYOE88lcONlQVGKMGdBgQ==}
-    cpu: [x86]
-    os: [linux]
-
-  sst-win32-arm64@4.17.0:
-    resolution: {integrity: sha512-G56bcj+qa9cfPaGxdtdbRbg/2jcbv25ZI3AOeHZXLNgr+Z5Z5m9EdPcB9QmiTYxCLnLZHiK6EqC4Duk0yGJjRQ==}
-    cpu: [arm64]
-    os: [win32]
-
-  sst-win32-x64@4.17.0:
-    resolution: {integrity: sha512-JccfzRJYVWru8OuLj3diYryY+JbIcBgXLoPBdqcckCiFy1fwIVGeq01WVYZYZmR3p8ivCHlPkirRR4g8gKSsxQ==}
-    cpu: [x64]
-    os: [win32]
-
-  sst-win32-x86@4.17.0:
-    resolution: {integrity: sha512-5Dp8znXfxpTmM8OpNpxfsuyM8BHkVRQ8wTP1jsDVzG1Pwxx59b4HUILTaYv3+CzE2AIZyW/V8LjC7fbhFE/yCQ==}
-    cpu: [x86]
-    os: [win32]
-
-  sst@4.17.0:
-    resolution: {integrity: sha512-Bkdp1mBBnueNhU3FSPXip/OOL05VX4B/1NpWkMU7UpQcyo1UzpnzLal48iLZKghlNFH+JKJFafhpIj3fXeK7+Q==}
-    hasBin: true
 
   stream-replace-string@2.0.0:
     resolution: {integrity: sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==}
@@ -2485,6 +2488,46 @@ snapshots:
   '@smithy/types@4.16.0':
     dependencies:
       tslib: 2.8.1
+
+  '@sst-community/sst-darwin-arm64@4.17.2':
+    optional: true
+
+  '@sst-community/sst-darwin-x64@4.17.2':
+    optional: true
+
+  '@sst-community/sst-linux-arm64@4.17.2':
+    optional: true
+
+  '@sst-community/sst-linux-x64@4.17.2':
+    optional: true
+
+  '@sst-community/sst-linux-x86@4.17.2':
+    optional: true
+
+  '@sst-community/sst-win32-arm64@4.17.2':
+    optional: true
+
+  '@sst-community/sst-win32-x64@4.17.2':
+    optional: true
+
+  '@sst-community/sst-win32-x86@4.17.2':
+    optional: true
+
+  '@sst-community/sst@4.17.2':
+    dependencies:
+      '@aws/durable-execution-sdk-js': 1.0.2
+      aws4fetch: 1.0.18
+      jose: 5.2.3
+      openid-client: 5.6.4
+    optionalDependencies:
+      '@sst-community/sst-darwin-arm64': 4.17.2
+      '@sst-community/sst-darwin-x64': 4.17.2
+      '@sst-community/sst-linux-arm64': 4.17.2
+      '@sst-community/sst-linux-x64': 4.17.2
+      '@sst-community/sst-linux-x86': 4.17.2
+      '@sst-community/sst-win32-arm64': 4.17.2
+      '@sst-community/sst-win32-x64': 4.17.2
+      '@sst-community/sst-win32-x86': 4.17.2
 
   '@types/debug@4.1.13':
     dependencies:
@@ -3651,46 +3694,6 @@ snapshots:
   source-map-js@1.2.1: {}
 
   space-separated-tokens@2.0.2: {}
-
-  sst-darwin-arm64@4.17.0:
-    optional: true
-
-  sst-darwin-x64@4.17.0:
-    optional: true
-
-  sst-linux-arm64@4.17.0:
-    optional: true
-
-  sst-linux-x64@4.17.0:
-    optional: true
-
-  sst-linux-x86@4.17.0:
-    optional: true
-
-  sst-win32-arm64@4.17.0:
-    optional: true
-
-  sst-win32-x64@4.17.0:
-    optional: true
-
-  sst-win32-x86@4.17.0:
-    optional: true
-
-  sst@4.17.0:
-    dependencies:
-      '@aws/durable-execution-sdk-js': 1.0.2
-      aws4fetch: 1.0.18
-      jose: 5.2.3
-      openid-client: 5.6.4
-    optionalDependencies:
-      sst-darwin-arm64: 4.17.0
-      sst-darwin-x64: 4.17.0
-      sst-linux-arm64: 4.17.0
-      sst-linux-x64: 4.17.0
-      sst-linux-x86: 4.17.0
-      sst-win32-arm64: 4.17.0
-      sst-win32-x64: 4.17.0
-      sst-win32-x86: 4.17.0
 
   stream-replace-string@2.0.0: {}
 
