@@ -90,7 +90,7 @@ The site is deployed to AWS using SST v4.17. SST provisions CloudFront, S3, ACM 
 
 ### Automatic deployment (GitHub Actions)
 
-Every push to `main` deploys to production through `.github/workflows/deploy.yml`. It can also be run by hand from the repo's **Actions** tab ("Deploy site" → "Run workflow"). The workflow is skipped until the one-off AWS setup below is done.
+Every push to `main` deploys to production through `.github/workflows/deploy.yml`. It can also be run by hand from the repo's **Actions** tab ("Deploy site" → "Run workflow").
 
 One-off setup, by someone with admin access to the Pathway Analytics AWS account (the account that holds the `pathwayanalytics.com` Route 53 zone):
 
@@ -118,7 +118,7 @@ One-off setup, by someone with admin access to the Pathway Analytics AWS account
    ```
 
 3. **Give the role permissions.** SST manages CloudFront, S3, ACM, Route 53, Lambda, IAM and SSM, so the simplest working option is the `AdministratorAccess` managed policy. The trust policy above limits who can use it. Narrow it later if wanted.
-4. **Tell GitHub the role.** In this repo: Settings → Secrets and variables → Actions → **Variables** tab → New repository variable.
+4. **Tell GitHub the role.** In this repo: Settings → Secrets and variables → Actions → New repository variable (or secret; either works).
    - Name: `AWS_DEPLOY_ROLE_ARN`
    - Value: the role ARN, e.g. `arn:aws:iam::<ACCOUNT_ID>:role/github-deploy-bella`
 5. **Test it.** Actions tab → "Deploy site" → Run workflow. A green tick means the site is live with the latest `main`.

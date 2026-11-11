@@ -2,8 +2,8 @@
 #
 # One-off setup (see README "Automatic deployment"):
 #   1. In AWS, create a GitHub OIDC identity provider and a deploy role.
-#   2. In GitHub, add a repository variable AWS_DEPLOY_ROLE_ARN with the role's ARN.
-# Until that variable exists, this workflow is skipped rather than failing.
+#   2. In GitHub, add AWS_DEPLOY_ROLE_ARN (the role's ARN) as a repository
+#      variable or secret. Either works.
 
 name: Deploy site
 
@@ -23,7 +23,6 @@ permissions:
 
 jobs:
   deploy:
-    if: ${{ vars.AWS_DEPLOY_ROLE_ARN != '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -44,7 +43,7 @@ jobs:
       - name: Sign in to AWS
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN || secrets.AWS_DEPLOY_ROLE_ARN }}
           aws-region: eu-west-2
 
       - name: Deploy to production
